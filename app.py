@@ -67,13 +67,13 @@ print(f'{bcolors.ENDC}{bcolors.BOLD}HORA SOLAR: {bcolors.ENDC}{bcolors.WARNING}{
 print('')
 
 #ALÇADA SOLAR
-alçada_solar_str = np.arccos(np.sin(np.radians(latitud))*np.sin(np.radians(declinacion)+np.cos(np.radians(latitud)*np.cos(np.radians(hora_solar)))))
+alçada_solar_str = np.arccos((np.sin(np.radians(latitud)))*np.sin(np.radians(declinacion))+np.cos(np.radians(latitud))*np.cos(np.radians(hora_solar)))
 alçada_solar = float(alçada_solar_str)
 print(f'{bcolors.ENDC}{bcolors.BOLD}ALÇADA SOLAR: {bcolors.ENDC}{bcolors.WARNING}{alçada_solar_str}º{bcolors.ENDC}')
 print('')
 
 #AZIMUT
-azimut_str = np.arccos((np.cos(np.radians(latitud))*np.cos(np.radians(hora_solar))-np.sin(np.radians(alçada_solar))*np.cos(np.radians(latitud))/(np.cos(np.radians(alçada_solar))*np.sin(np.radians(latitud)))))
+azimut_str = np.arccos((np.cos(np.radians(latitud))*np.cos(np.radians(hora_solar))-np.sin(np.radians(alçada_solar))*np.cos(np.radians(latitud))/(np.cos(np.radians(alçada_solar))*np.sin(np.radians(latitud))))))
 azimut = float(azimut_str)
 print('')
-print(f'{bcolors.ENDC}{bcolors.BOLD}ALÇADA SOLAR: {bcolors.ENDC}{bcolors.WARNING}{azimut_str}º{bcolors.ENDC}')
+print(f'{bcolors.ENDC}{bcolors.BOLD}AZIMUT: {bcolors.ENDC}{bcolors.WARNING}{azimut_str}º{bcolors.ENDC}')
