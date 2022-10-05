@@ -67,7 +67,7 @@ print(f'{bcolors.ENDC}{bcolors.BOLD}HORA SOLAR: {bcolors.ENDC}{bcolors.WARNING}{
 print('')
 
 #ALÇADA SOLAR
-alçada_solar_str = np.arccos((np.sin(np.radians(latitud)))*np.sin(np.radians(declinacion))+np.cos(np.radians(latitud))*np.cos(np.radians(hora_solar)))
+alçada_solar_str = np.arcsin((np.sin(np.radians(latitud)))*(np.sin(np.radians(declinacion)))+(np.cos(np.radians(latitud)))*(np.cos(np.radians(hora_solar))))
 alçada_solar = float(alçada_solar_str)
 print(f'{bcolors.ENDC}{bcolors.BOLD}ALÇADA SOLAR: {bcolors.ENDC}{bcolors.WARNING}{alçada_solar_str}º{bcolors.ENDC}')
 print('')
